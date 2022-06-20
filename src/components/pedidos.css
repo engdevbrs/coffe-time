@@ -1,0 +1,28 @@
+.frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100% !important;
+    height: 70vh;
+}
+
+.titulo-header{
+    color: aliceblue;
+}
+
+.pedidos-layout{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.pedidos{
+    border-radius: 5px 5px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.ordenar{
+    border-radius: 5px 5px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}

@@ -42,8 +42,8 @@ const Home = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Comida de calidad</h3>
+              <p>Ofrecemos comida fresca con productos seleccionados.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -54,8 +54,8 @@ const Home = () => {
             />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Variedad de platos</h3>
+              <p>Porque sabemos que en la variedad está el gusto, tenemos diferentes tipos de platos.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -65,14 +65,15 @@ const Home = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Comida vegana</h3>
+              <p>Inluimos comida rica en vegetales.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
         <Container>
           <Row className='cart'>
             <Col className="mb-2">
+              <h6>1</h6>
               <Cart/>
             </Col>
           </Row>
@@ -82,7 +83,7 @@ const Home = () => {
         </Container>
         <Container className='mt-5 mb-5'>
           <Row className='coffes-variants'>
-          { cardsCoffe.map((value,key) => {
+          { cardsCoffe.map(value => {
             return(
             <>
             <Card className='coffe-cards' text='white' style={{ width: '26rem'}}>
@@ -104,10 +105,10 @@ const Home = () => {
         </Container>
         <Container className='benefits-card'>
           <Row>
-          { beneficios.map((value,key) => {
+          { beneficios.map(value => {
               return(
                 <>
-                  <div key={key}>
+                  <div>
                     <h4>{value.titulo}</h4>
                     <p>{value.descripcion}</p>
                   </div>

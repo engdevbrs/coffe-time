@@ -3,24 +3,9 @@
     text-align: center;
 }
 
-.benefits-card{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: .25rem;
-    background-color: rgba(26, 26, 26, 0.705);
-    padding: 20px;
-}
-
-.benefits-card h4 {
-    color: rgb(148, 148, 148);
-}
-
-.benefits-card p {
+.tipo{
     color: rgb(202, 202, 202);
-}
-
-.benefits-card h2 {
-    color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 .cart{
@@ -41,13 +26,24 @@
 
 .coffe-cards{
     margin: 10px;
-    background-color: rgba(26, 26, 26, 0.705) !important;
+    background-color: rgba(54, 54, 54, 0.587) !important;
 }
 
-.coffes-variants{
-    margin: 0;
+.coffes-variants {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+}
+
+.divider{
+    border:1px solid !important;
+    color: aliceblue;
+    margin: 0px !important;
+}
+
+.cabecera-init{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

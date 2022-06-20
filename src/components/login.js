@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './login.css';
 import acceso from './images/acceso.png';
+
 
 async function loginUser(credentials) {
     return fetch('https://maf2qxs1f6.execute-api.us-east-1.amazonaws.com/prod/oauth/token', {
@@ -15,7 +15,7 @@ async function loginUser(credentials) {
       .then(data => data.json())
    };
 
-const Login = ({ setToken }) => {
+const Login = () => {
     const [client_id, setUserName] = useState();
     const [client_secret, setPassword] = useState();
 
@@ -27,10 +27,11 @@ const Login = ({ setToken }) => {
             grant_type: 'client_credentials',
             audience: 'https://escalab.academy'
         });
+        
         if(token.error === "access_denied"){
-          setToken(undefined);
+          alert("Credenciales invalidas")
         }else{
-          setToken(token);
+          localStorage.setItem("tokenUser",JSON.stringify(token));
         }
       }
 return (
@@ -69,7 +70,5 @@ return (
     </>
     )
 }
-
-Login.propTypes = { setToken: PropTypes.func.isRequired };
 
 export default Login
