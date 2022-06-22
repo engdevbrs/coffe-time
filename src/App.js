@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import Login from './components/login';
 import Carta from './components/carta';
 import Pedidos from './components/pedidos';
-
+import User from './components/users';
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
             <Route path='cartera' element= { <Carta /> } />
             <Route path='login' element= { <Login /> } />
             <Route path='pedidos' element= { <Pedidos /> } />
+            <Route path='usuarios' element= { <User /> } />
             <Route path='*' element={ <Navigate replace to = "/"/> } />
           </Route>
         </Routes>

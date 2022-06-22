@@ -3,8 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100% !important;
-    height: 70vh;
 }
 
 .titulo-header{
@@ -14,7 +12,7 @@
 .pedidos-layout{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
 }
 
 .pedidos{
@@ -25,4 +23,40 @@
 .ordenar{
     border-radius: 5px 5px;
     background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.idPedido{
+    color: aliceblue;
+}
+
+.addProd .btn, .delProd .btn{
+    width: 100% !important;
+}
+
+.platos-cards{
+    margin: 10px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.platos-cards img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.platos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divider{
+    border:1px solid !important;
+    color: aliceblue;
+    margin: 0px !important;
+}
+
+.crearpedidos-layout{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }

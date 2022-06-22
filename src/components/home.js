@@ -3,9 +3,7 @@ import pexels1 from './images/pexels1.jpg';
 import pexels2 from './images/pexels2.jpg';
 import pexels3 from './images/pexels3.jpg';
 import './home.css';
-import Cart from './carrito';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Card } from 'react-bootstrap';
 import capuccino from './images/capuccino.jpg';
 import espresso from './images/espresso.jpg';
@@ -16,6 +14,7 @@ import frappe from './images/frappe.jpg';
 
 
 const Home = () => {
+  
   const beneficios = [
     {titulo: "Ayuda a quemar grasas", descripcion: "Su ventaja es que es una de las pocas sustancias naturales que ayuda a quemar grasa." },
     {titulo: "Fuente de antioxidantes", descripcion: "A las vitaminas y minerales que contiene una taza de café se agrega una importante carga de antioxidantes, especialmente polifenoles y ácidos hidroxicinámicos."},
@@ -66,18 +65,10 @@ const Home = () => {
             />
             <Carousel.Caption>
               <h3>Comida vegana</h3>
-              <p>Inluimos comida rica en vegetales.</p>
+              <p>Incluimos comida rica en vegetales.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <Container>
-          <Row className='cart'>
-            <Col className="mb-2">
-              <h6>1</h6>
-              <Cart/>
-            </Col>
-          </Row>
-        </Container>
         <Container className='mt-5 mb-5'>
           <h2 className='benefits'>Tipos de café</h2>
         </Container>

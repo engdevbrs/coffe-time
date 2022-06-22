@@ -13,7 +13,6 @@ const Menu = () => {
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
           <Nav.Link as={Link} to="/cartera" >Menu</Nav.Link>
-          <Nav.Link as={Link} to="/pedidos" >Pedidos</Nav.Link>
         </Nav>
         </Container>
       </Navbar>

@@ -8,22 +8,6 @@
     text-align: center;
 }
 
-.cart{
-    position: fixed; 
-    top: 50%;
-    right: 10px;
-    z-index: 1000;
-}
-
-.cart h6{
-    background-color: #EAF480;
-    border-radius: 50px 50px;
-    padding: 2px;
-    position: fixed; 
-    top: 50%;
-    right: 18px;
-}
-
 .coffe-cards{
     margin: 10px;
     background-color: rgba(54, 54, 54, 0.587) !important;

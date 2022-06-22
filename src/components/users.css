@@ -1,0 +1,12 @@
+.registeredUsers{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.titulo{
+    color: rgb(211, 211, 211);
+    margin-top: 5%;
+    text-align: center;
+}

@@ -1,10 +1,8 @@
 import getMenu from "../services/getCarta";
-import { Card, Container, Nav, Button, Alert } from "react-bootstrap";
+import { Container, Alert } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import './carta.css';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Cart from './carrito';
 import Platos from "./platos";
 import { Link } from 'react-router-dom';
 
@@ -24,14 +22,6 @@ const Carta = () => {
 
   return(
       <>
-      <Container>
-        <Row className='cart'>
-          <Col className="mb-2">
-            <h6>1</h6>
-            <Cart/>
-          </Col>
-        </Row>
-      </Container>
       <Container>
       <Row  className='cabecera-init mt-5 mb-2'>
         <h2 className='benefits'>Carta</h2>

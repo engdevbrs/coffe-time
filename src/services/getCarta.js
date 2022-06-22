@@ -8,6 +8,7 @@ const getMenu = async () => {
 });
 const getCarteraResponse = await getCartera.json();
 const carteraResponse = Object.entries(getCarteraResponse);
+localStorage.setItem("platos", JSON.stringify(carteraResponse));
 return carteraResponse;
 }
 
