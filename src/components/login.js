@@ -26,8 +26,7 @@ const Login = () => {
           client_secret,
           grant_type: 'client_credentials',
           audience: 'https://escalab.academy'
-      });
-      
+      }); 
       if(token.error === "access_denied"){
         alert("Credenciales invalidas")
       }else{

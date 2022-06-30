@@ -10,3 +10,24 @@
     margin-top: 5%;
     text-align: center;
 }
+
+.profile-cards{
+    margin: 10px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.profile-cards img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list-group-item{
+    background-color: #262727 !important;
+    color: rgb(211, 211, 211) !important;
+}

@@ -10,7 +10,6 @@ const getUsers = async () => {
         }
     });
     const getUserResponse = await getUser.json();
-    console.log(getUserResponse);
     return getUserResponse;
   }
   

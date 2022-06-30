@@ -32,13 +32,13 @@ const User = () => {
                 console.log(value);
                 return(
                     <>
-                    <Col lg={4} md={6} sm={6} xs={12} >
-                    <Card className='profile m-3'>
+                    <Col className='profile' lg={4} md={6} sm={6} xs={12} >
+                    <Card className='profile-cards' text='white' style={{ width: '20rem'}} >
                         <Card.Img variant="top" src={value.img}/>
                         <Card.Body>
                             <Card.Title>{value.name}</Card.Title>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
+                        <ListGroup className="list-group-flush" >
                             <ListGroupItem><strong>Email: </strong>{value.email}</ListGroupItem>
                             <ListGroupItem><strong>Teléfono: </strong>{value.phone}</ListGroupItem>
                             <ListGroupItem><strong>Rol: </strong>{value.roles[0]}</ListGroupItem>

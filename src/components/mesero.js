@@ -3,12 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import camarero from './images/camarero.png';
 
-const Mesero = () => {
+const Mesero = ({carrito}) => {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [orden, setOrden] = useState(carrito);
 
+    console.log(orden);
+    
     return (
         <>
         <Button variant="outline">
@@ -16,7 +18,7 @@ const Mesero = () => {
         </Button>
         <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Información del camarero</Offcanvas.Title>
+            <Offcanvas.Title>Órdenes</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
             Some text as placeholder. In real life you can have the elements you

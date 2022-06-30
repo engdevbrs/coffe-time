@@ -60,3 +60,22 @@
     flex-direction: column;
     width: 80%;
 }
+
+.info-mesero .mesero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.offcanvas{
+    color: bisque;
+}
+
+.offcanvas-title{
+    color: beige;
+}
+
+.offcanvas-start{
+    background-color: rgb(44, 44, 44) !important;
+}

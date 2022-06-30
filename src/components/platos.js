@@ -20,9 +20,9 @@ const Platos = ({data}) => {
                     <Card className='platos-cards' text='white' style={{ width: '20rem'}} key={key}>
                     <Card.Img variant="top" src={ subValue.img }/>
                     <Card.Body>
-                    <Card.Title><strong>Plato: </strong> { subValue.name }</Card.Title>
+                        <Card.Title><strong>Plato: </strong> { subValue.name }</Card.Title>
                         <Card.Text>
-                        <strong>Ingredientes: </strong>{ subValue.description }
+                        <strong>Descripción: </strong>{ subValue.description }
                         </Card.Text>
                         <Card.Text>
                         <strong>Precio:</strong> ${ subValue.price }
