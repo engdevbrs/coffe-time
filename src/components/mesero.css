@@ -1,0 +1,15 @@
+.mesero-info{
+    position: fixed; 
+    top: 50%;
+    right: 10px;
+    z-index: 1000;
+}
+
+.mesero-info h6{
+    background-color: #EAF480;
+    border-radius: 50px 50px;
+    padding: 2px;
+    position: fixed; 
+    top: 50%;
+    right: 18px;
+}

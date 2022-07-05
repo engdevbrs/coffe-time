@@ -1,0 +1,33 @@
+.benefits{
+    color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+.tipo{
+    color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+.coffe-cards{
+    margin: 10px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.coffes-variants {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divider{
+    border:1px solid !important;
+    color: aliceblue;
+    margin: 0px !important;
+}
+
+.cabecera-init{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

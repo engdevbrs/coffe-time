@@ -1,0 +1,89 @@
+.frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-header{
+    color: aliceblue;
+}
+
+.pedidos-layout{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.pedidos{
+    border-radius: 5px 5px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.ordenar{
+    border-radius: 5px 5px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.idPedido{
+    color: aliceblue;
+}
+
+.addProd .btn, .delProd .btn{
+    width: 100% !important;
+}
+
+.platos-cards{
+    margin: 10px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.platos-cards img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.platos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divider{
+    border:1px solid !important;
+    color: aliceblue;
+    margin: 0px !important;
+}
+
+.crearpedidos-layout{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.info-mesero .mesero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.offcanvas{
+    color: bisque;
+}
+
+.offcanvas-title{
+    color: beige;
+}
+
+.offcanvas-start{
+    background-color: rgb(44, 44, 44) !important;
+}
+
+.mesero-info .btn-carrito{
+    transition: transform .2s;
+}
+
+.mesero-info .btn-carrito:hover{
+    transform: scale(1.1);
+}

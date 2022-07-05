@@ -1,0 +1,48 @@
+.platos-cards{
+    margin: 10px;
+    background-color: rgba(54, 54, 54, 0.587) !important;
+}
+
+.platos-cards img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.platos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.view-more{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-more .btn{
+    background-color: #6464649c !important;
+    border-color: #EAF480 !important;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.view-more .btn:hover{
+    background-color: #ffffff9c !important;
+    color: rgb(46, 46, 46);
+    border-color: #52cdd2 !important;
+    margin: 15px;
+}
+
+.view-more .nav-link{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0px;
+}
+
+.view-more .nav-link:hover{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    padding: 0px;
+}
