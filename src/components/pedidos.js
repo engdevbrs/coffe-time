@@ -374,10 +374,11 @@ const Pedidos = () => {
                                         <>
                                             <Row className="mt-2">
                                             <h6>Plato: {value.nombre}</h6>
+                                            <h6>Orden para mesa: {value.table}</h6>
                                             <h6>Cantidad: {value.quantity}</h6>
-                                            <h6>Order para mesa: {value.table}</h6>
                                             <h6>Precio: ${value.precio} c/u</h6>
                                             <img src={value.img} style={{ width: '13rem'}} alt="Error al obtener imagen"/>
+                                            <hr className="mt-3 mb-3"/>
                                             </Row>
                                         </>
                                     )
