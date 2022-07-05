@@ -1,3 +1,23 @@
 .navbar .navitems{
     max-width: inherit !important;
 }
+
+.navbar .logout{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end !important;
+    margin-right: 10px;
+}
+
+.logout-button{
+    transition: transform .2s;
+}
+
+.logout-button:hover{
+    transform: scale(1.1);
+}
+
+
+section{
+    min-height: 80vh;
+}

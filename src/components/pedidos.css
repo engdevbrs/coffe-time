@@ -79,3 +79,11 @@
 .offcanvas-start{
     background-color: rgb(44, 44, 44) !important;
 }
+
+.mesero-info .btn-carrito{
+    transition: transform .2s;
+}
+
+.mesero-info .btn-carrito:hover{
+    transform: scale(1.1);
+}

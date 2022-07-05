@@ -6,11 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import getUsers from "../services/getUsers";
 import './users.css';
-
+import UserInvalid from './userInvalid';
 
 const User = () => {
 
     const [ dataUser, setDataUser ] = useState([]);
+
+    console.log(dataUser);
 
     const getData = async() =>{
         const newDataUser = await getUsers();
@@ -20,6 +22,10 @@ const User = () => {
     useEffect ( () => {
         getData();
     },[]);
+
+    if(dataUser === null) {
+        return <UserInvalid />
+    }
 
     return(
         <>

@@ -1,6 +1,6 @@
 import getOrders from "../services/getOrders";
 import { Card, Container, Button, Form, Offcanvas } from "react-bootstrap";
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useState } from 'react';
 import './pedidos.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,9 +9,11 @@ import getUsers from "../services/getUsers";
 import getTables from "../services/getMesas";
 import camarero from './images/camarero.png';
 import Swal from "sweetalert2";
+import UserNoAuth from "./userNoAuth";
+
 
 async function newOrder(pedido) { 
-    const getToken = localStorage.getItem('tokenUser');
+    const getToken = sessionStorage.getItem('tokenUser');
     const accesToken = JSON.parse(getToken).access_token;
     return fetch('https://maf2qxs1f6.execute-api.us-east-1.amazonaws.com/prod/api/orders', {
       method: 'PUT',
@@ -47,8 +49,15 @@ async function newOrder(pedido) {
     })
    };
 
+function getToken() {
+const tokenString = sessionStorage.getItem('tokenUser');
+const userToken = JSON.parse(tokenString);
+return userToken === null ? false: userToken.access_token;
+}
+
 const Pedidos = () => {
 
+    const token = getToken();
     const [ data, setData ] = useState([]);
     const [ dataUser, setDataUser ] = useState([]);
     const [ dataTable, setDataTable ] = useState([]);
@@ -75,6 +84,10 @@ const Pedidos = () => {
     useEffect ( () => {
         getData();
     },[]);
+
+    if(!token) {
+        return <UserNoAuth />
+    }
 
     data.forEach(values => {
       const arrayOrders = values.order;
@@ -170,12 +183,13 @@ const Pedidos = () => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Confirmo',
+            confirmButtonText: 'Confirmar órden',
             cancelButtonText: 'Cancelar órden'
           }).then((result) => {
             if (result.isConfirmed) {
                 setPedidoMesero(oldArray => [...oldArray,request]);
                 newOrder(request);
+                handleShow();
             }
           });
     };
@@ -196,7 +210,7 @@ const Pedidos = () => {
             })
         })
     });
-        
+
   return(
       <>
         <Container className="frame" fluid>
@@ -306,7 +320,7 @@ const Pedidos = () => {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridCant">
                             <Form.Label>Cantidad</Form.Label>
-                            <Form.Control className="cantidad" type="number" placeholder="Ingrese la cantidad"/>
+                            <Form.Control className="cantidad" type="number" min={1} defaultValue={1} placeholder="Ingrese la cantidad"/>
                         </Form.Group>
                         </Row>
                         </>
@@ -338,7 +352,7 @@ const Pedidos = () => {
           <Row className='mesero-info'>
             <Col className="mb-2">
                 <Button variant="outline">
-                <img src={ camarero }  width='48' onClick={handleShow}/>
+                <img className="btn-carrito" src={ camarero }  width='48' onClick={handleShow}/>
                 </Button>
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header closeButton>
