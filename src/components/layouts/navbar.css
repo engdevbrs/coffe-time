@@ -1,3 +1,15 @@
+.navbar{
+    background-color: #313131c4;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(222, 212, 200) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(248, 213, 171) !important;
+}
+
 .navbar .navitems{
     max-width: inherit !important;
 }

@@ -71,7 +71,6 @@ const Login = () => {
       let loginLockAux = new Date(Date.parse(loginLock));
       let diff =  loginDateAux - loginLockAux;
       let fecha = Math.round(diff/1000/60);
-      console.log(fecha);
       if(fecha > 14){
         clearInterval();
         setIntentos(0);

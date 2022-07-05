@@ -190,6 +190,8 @@ const Pedidos = () => {
                 setPedidoMesero(oldArray => [...oldArray,request]);
                 newOrder(request);
                 handleShow();
+                e.target.reset();
+                setprodInput(1);
             }
           });
     };

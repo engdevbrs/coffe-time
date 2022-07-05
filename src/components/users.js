@@ -33,7 +33,6 @@ const User = () => {
         <Row className='registeredUsers m-4'>
         {
             dataUser.map(value => {
-                console.log(value);
                 return(
                     <>
                     <Col className='profile' lg={4} md={6} sm={6} xs={12} >

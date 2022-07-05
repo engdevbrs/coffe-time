@@ -24,12 +24,12 @@ const Menu = () => {
   }
   return (
       <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar variant="dark">
         <Container className='navitems'>
         <Navbar.Brand as={Link} to="/"><img src={ coffe } /></Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
-          <Nav.Link as={Link} to="/cartera" >Menu</Nav.Link>
+          <Nav.Link as={Link} to="/cartera" >Menú</Nav.Link>
           <Nav.Link as={Link} to="/pedidos" >Pedidos</Nav.Link>
           <Nav.Link as={Link} to="/usuarios" >Usuarios</Nav.Link>
         </Nav>
