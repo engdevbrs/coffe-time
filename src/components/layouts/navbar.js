@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container, Button, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import { Outlet, Link, useNavigate} from 'react-router-dom';
+import Swal from 'sweetalert2';
 import coffe from '../images/coffee.png';
 import logout from '../images/logout.png';
 import Footer from './footer';
@@ -17,10 +18,19 @@ const Menu = () => {
   const navigate = useNavigate();
   const userLogin = sessionStorage.getItem("tokenUser");
   const handleLogout = () => {
-    if(userLogin !== undefined){
-      sessionStorage.removeItem("tokenUser");
-      navigate('/');
-    }
+    Swal.fire({
+      title: 'Cerrar sesión?',
+      showDenyButton: true,
+      confirmButtonText: 'Cerrar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if(userLogin !== undefined){
+          sessionStorage.removeItem("tokenUser");
+          Swal.fire('Sesión cerrada', '', 'success')
+          navigate('/');
+        }
+      }
+    })
   }
   return (
       <>
