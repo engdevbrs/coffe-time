@@ -12,8 +12,6 @@ const User = () => {
 
     const [ dataUser, setDataUser ] = useState([]);
 
-    console.log(dataUser);
-
     const getData = async() =>{
         const newDataUser = await getUsers();
         setDataUser(newDataUser);
@@ -23,7 +21,7 @@ const User = () => {
         getData();
     },[]);
 
-    if(dataUser === null) {
+    if(dataUser === null || dataUser.error === "access_denied") {
         return <UserInvalid />
     }
 
