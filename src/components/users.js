@@ -33,6 +33,8 @@ const User = () => {
         <Row className='registeredUsers m-4'>
         {
             dataUser.map(value => {
+                let birthday = new Date(value.birthday);
+                birthday = birthday.toLocaleDateString();
                 return(
                     <>
                     <Col className='profile' lg={4} md={6} sm={6} xs={12} >
@@ -44,6 +46,7 @@ const User = () => {
                         <ListGroup className="list-group-flush" >
                             <ListGroupItem><strong>Email: </strong>{value.email}</ListGroupItem>
                             <ListGroupItem><strong>Teléfono: </strong>{value.phone}</ListGroupItem>
+                            <ListGroupItem><strong>Fecha de cumpleaños: </strong>{birthday}</ListGroupItem>
                             <ListGroupItem><strong>Rol: </strong>{value.roles[0]}</ListGroupItem>
                         </ListGroup>
                     </Card>
